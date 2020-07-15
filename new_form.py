@@ -1,0 +1,97 @@
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+class Ui_form(object):
+
+    def setupUi(self, Form):
+        Form.setObjectName("Form")
+        Form.setWindowModality(QtCore.Qt.NonModal)
+        Form.resize(600, 450)
+        Form.setMaximumSize(QtCore.QSize(600, 450))
+        self.centralwidget = QtWidgets.QWidget(Form)
+        self.centralwidget.setObjectName("centralwidget")
+        self.label = QtWidgets.QLabel(self.centralwidget)
+        self.label.setGeometry(QtCore.QRect(10, 145, 231, 31))
+        self.label.setObjectName("label")
+        self.label_2 = QtWidgets.QLabel(self.centralwidget)
+        self.label_2.setGeometry(QtCore.QRect(350, 145, 231, 31))
+        self.label_2.setObjectName("label_2")
+        self.lineEdit = QtWidgets.QLineEdit(self.centralwidget)
+        self.lineEdit.setGeometry(QtCore.QRect(10, 170, 271, 31))
+        self.lineEdit.setObjectName("lineEdit")
+        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton.setGeometry(QtCore.QRect(10, 210, 131, 41))
+        self.pushButton.setObjectName("pushButton")
+        self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_2.setGeometry(QtCore.QRect(150, 210, 131, 41))
+        self.pushButton_2.setObjectName("pushButton_2")
+        self.textEdit = QtWidgets.QTextEdit(self.centralwidget)
+        self.textEdit.setGeometry(QtCore.QRect(10, 10, 571, 141))
+        self.textEdit.setObjectName("textEdit")
+        self.textEdit_2 = QtWidgets.QTextEdit(self.centralwidget)
+        self.textEdit_2.setGeometry(QtCore.QRect(10, 260, 571, 141))
+        self.textEdit_2.setObjectName("textEdit_2")
+
+
+        Form.setCentralWidget(self.centralwidget)
+        self.statusbar = QtWidgets.QStatusBar(Form)
+        self.statusbar.setObjectName("statusbar")
+        Form.setStatusBar(self.statusbar)
+        self.menuBar = QtWidgets.QMenuBar(Form)
+        self.menuBar.setGeometry(QtCore.QRect(0, 0, 600, 22))
+        self.menuBar.setObjectName("menuBar")
+        self.menu = QtWidgets.QMenu(self.menuBar)
+        self.menu.setObjectName("menu")
+
+        Form.setMenuBar(self.menuBar)
+        self.action = QtWidgets.QAction(Form)
+        self.action.setCheckable(False)
+        self.action.setEnabled(True)
+        self.action.setObjectName("action")
+        self.action_2 = QtWidgets.QAction(Form)
+        self.action_2.setObjectName("action_2")
+        self.menu.addAction(self.action)
+        self.menu.addAction(self.action_2)
+        self.menuBar.addAction(self.menu.menuAction())
+
+        self.menu_2 = QtWidgets.QMenu(self.menuBar)
+        self.menu_2.setObjectName("menu_2")
+        self.menuBar.addAction(self.menu_2.menuAction())
+        self.action_3 = QtWidgets.QAction(Form)
+        self.action_3.setObjectName("action_3")
+        self.menu_2.addAction(self.action_3)
+        self.action_4 = QtWidgets.QAction(Form)
+        self.action_4.setObjectName("action_4")
+        self.menu_2.addAction(self.action_4)
+        self.action_5 = QtWidgets.QAction(Form)
+        self.action_5.setObjectName("action_5")
+        self.menu_2.addAction(self.action_5)
+        QtCore.QMetaObject.connectSlotsByName(Form)
+
+        self.comboBox = QtWidgets.QComboBox(self.centralwidget)
+        self.comboBox.setGeometry(QtCore.QRect(350, 145, 231, 31))
+        self.comboBox.setObjectName("comboBox")
+
+    def retranslateUi(self, Form):
+        _translate = QtCore.QCoreApplication.translate
+
+        Form.setWindowTitle(_translate("Form", "DES"))
+        self.pushButton.setText(_translate("Form", "Зашифровать"))
+        self.pushButton_2.setText(_translate("Form", "Расшифровать"))
+        self.menu.setTitle(_translate("Form", "Файл"))
+        self.menu_2.setTitle(_translate("Form", "Ключ"))
+        self.action.setText(_translate("Form", "Загрузить "))
+        self.action_2.setText(_translate("Form", "Сохранить "))
+        self.action_3.setText(_translate("Form", "Загрузить "))
+        self.action_4.setText(_translate("Form", "Сохранить "))
+        self.action_5.setText(_translate("Form", "Сгенерировать "))
+        self.label.setText(_translate("Form", "Ключ :"))
+        self.label_2.setText(_translate("Form", "Выберите режим шифрования :"))
+        self.action.setStatusTip("Загрузить файл")
+        self.action_2.setStatusTip("Сохранить результат")
+        self.action_3.setStatusTip("Загрузить ключ из файла")
+        self.action_4.setStatusTip("Сохранить ключ в файл")
+        self.action_5.setStatusTip("Сгенерировать ключ")
+
+
+
+

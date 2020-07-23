@@ -13,7 +13,7 @@ class Ui_form(object):
         self.label.setGeometry(QtCore.QRect(10, 145, 231, 31))
         self.label.setObjectName("label")
         self.label_2 = QtWidgets.QLabel(self.centralwidget)
-        self.label_2.setGeometry(QtCore.QRect(350, 145, 231, 31))
+        self.label_2.setGeometry(QtCore.QRect(310, 145, 231, 31))
         self.label_2.setObjectName("label_2")
         self.lineEdit = QtWidgets.QLineEdit(self.centralwidget)
         self.lineEdit.setGeometry(QtCore.QRect(10, 170, 271, 31))
@@ -68,8 +68,12 @@ class Ui_form(object):
         QtCore.QMetaObject.connectSlotsByName(Form)
 
         self.comboBox = QtWidgets.QComboBox(self.centralwidget)
-        self.comboBox.setGeometry(QtCore.QRect(350, 145, 231, 31))
+        self.comboBox.setGeometry(QtCore.QRect(310, 170, 270, 31))
         self.comboBox.setObjectName("comboBox")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
@@ -91,6 +95,10 @@ class Ui_form(object):
         self.action_3.setStatusTip("Загрузить ключ из файла")
         self.action_4.setStatusTip("Сохранить ключ в файл")
         self.action_5.setStatusTip("Сгенерировать ключ")
+        self.comboBox.setItemText(0, _translate("Form", "ECB"))
+        self.comboBox.setItemText(1, _translate("Form", "CBC"))
+        self.comboBox.setItemText(2, _translate("Form", "CFB"))
+        self.comboBox.setItemText(3, _translate("Form", "OFB"))
 
 
 

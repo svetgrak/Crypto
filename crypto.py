@@ -313,6 +313,12 @@ class MainWin(QMainWindow):
             self.ui = Ui_form()
             self.ui.setupUi(self)
             self.ui.retranslateUi(self)
+            self.ui.action.triggered.connect(self.OfFileOfTextEdit)
+            self.ui.action_2.triggered.connect(self.InFileOfTextEdit)
+            self.ui.action_3.triggered.connect(self.OfFile)
+            self.ui.action_4.triggered.connect(self.IfFile)
+
+
 
 
 
